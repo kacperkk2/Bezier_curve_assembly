@@ -33,13 +33,18 @@ int main(int argc, char ** argv)
                 {
                     if(i > 4)
                     {
-			std::cout<<"Klikniecie nr "<<i<<" i zerowanie tablicy"<<std::endl;
-                        memset(pixels, 255, 640 * 480 * sizeof(Uint32));
+			if(argc == 2 && std::string(argv[1]) == "-nc")
+				std::cout<<"Klikniecie nr "<<i + 1<<" bez wyczyszczenia tablicy"<<std::endl;
+			else
+			{
+				std::cout<<"Klikniecie nr "<<i + 1<<" i zerowanie tablicy"<<std::endl;
+		                memset(pixels, 255, 640 * 480 * sizeof(Uint32));
+			}
                         i = 0;
                     }
                     else
                     {
-			std::cout<<"Klikniecie nr "<<i<<std::endl; 
+			std::cout<<"Klikniecie nr "<<i + 1<<std::endl; 
                         mouseX[i] = event.motion.x;
                         mouseY[i] = event.motion.y;
 			
