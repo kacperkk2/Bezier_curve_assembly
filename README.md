@@ -9,3 +9,6 @@ After 6th click program clears canvas
 
 Use with no cleaning canvas (./bezier -nc):
 Drawing without cleaning, allows to draw multiple bezier curves
+
+
+<img src="screenshots/face.png" width = 500>
